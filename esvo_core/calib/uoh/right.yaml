@@ -1,0 +1,32 @@
+image_width: 346
+image_height: 260
+camera_name: uoh
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [302.2379003034861, 0.0, 180.98045623263963, 
+         0.0, 302.0343761197425, 120.14911311634673, 
+         0.0, 0.0, 1.0]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  data: [-0.3636318234941681, 0.14186806325193937, 0.0010583447754239298, 0.0003053126262369986]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 
+         0, 1, 0, 
+         0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [302.2379003034861, 0.0, 180.98045623263963, 0.0, 
+         0.0, 302.0343761197425, 120.14911311634673, 0.0, 
+         0.0, 0.0, 1.0, 0.0]
+T_right_left:
+  rows: 3
+  cols: 4
+  data: [1, 0, 0, 0,
+         0, 1, 0, 0,
+         0, 0, 1, 0]

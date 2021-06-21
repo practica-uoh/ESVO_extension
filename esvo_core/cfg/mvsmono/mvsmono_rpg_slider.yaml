@@ -38,7 +38,7 @@ BM_ZNCC_Threshold: 0.1
 BM_bUpDownConfiguration: False
 # Publish result parameters
 bVisualizeGlobalPC: True
-visualizeGPC_interval: 3
+visualizeGPC_interval: 1
 NumGPC_added_oper_refresh: 1000
 
 # MVStereo Mode
@@ -69,9 +69,9 @@ opts_mapper_parallex: 5.0
 opts_mapper_PatchSize_X: 3
 opts_mapper_PatchSize_Y: 3
 opts_mapper_TS_score: 1.0
-KEYFRAME_LINEAR_DIS: 0.15 # m
-KEYFRAME_ORIENTATION_DIS: 5 # degree
+KEYFRAME_LINEAR_DIS: 0.10 # m
+KEYFRAME_ORIENTATION_DIS: 2 # degree
 KEYFRAME_MEANDEPTH_DIS: 0.3 # percentage
-EMVS_Init_event: 100000 #200000
-EMVS_Keyframe_event: 200000 #200000
+EMVS_Init_event: 70000 #200000
+EMVS_Keyframe_event: 230000 #200000
 stdVar_init: 0.05

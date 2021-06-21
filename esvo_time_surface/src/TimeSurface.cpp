@@ -68,12 +68,18 @@ namespace esvo_time_surface
 			for (int x = 0; x < sensor_size_.width; ++x)
 			{
 				dvs_msgs::Event most_recent_event_at_coordXY_before_T;
+				ROS_DEBUG("The external sync time is:");
+				ROS_DEBUG("%f",external_sync_time.toSec());
+				
 				if (pEventQueueMat_->getMostRecentEventBeforeT(x, y, external_sync_time, &most_recent_event_at_coordXY_before_T))
 				{
 					const ros::Time &most_recent_stamp_at_coordXY = most_recent_event_at_coordXY_before_T.ts;
+					ROS_DEBUG("Most recent stamp at coord: (%i,%i)",x,y);
+					ROS_DEBUG("%f",most_recent_stamp_at_coordXY.toSec());
 					if (most_recent_stamp_at_coordXY.toSec() > 0) // check if negative timestamp
 					{
 						const double dt = (external_sync_time - most_recent_stamp_at_coordXY).toSec();
+						ROS_DEBUG("The dt is: %f",dt);
 						double polarity = (most_recent_event_at_coordXY_before_T.polarity) ? 1.0 : -1.0;
 						double expVal = std::exp(-dt / decay_sec);
 						if (!ignore_polarity_)

@@ -2,7 +2,7 @@
   <!-- ROS BAG -->
   <rosparam param="/use_sim_time">true</rosparam>
   <node pkg="rosbag" type="play" name="play" output="screen" required="true"
-    args="/home/tof/Documents/UOH/dynamic_6dof.bag -r 0.3 --clock --pause">
+    args="/home/tof/Desktop/3dopengl.bag -r 0.1 --clock --pause">
     <!-- MODIFY THE ABOVE DIRECTORY -->
   </node>
 
